@@ -1,0 +1,69 @@
+{
+  "broker" : "tcp://localhost:1883",
+  "topic" : "Sensor",
+  "clientId" : "publish_client",
+  "sensorList" : [ {
+    "topic" : "TEMPERATURE",
+    "unit" : "C",
+    "type" : "int16",
+    "factor" : "10",
+    "lowerBoundary" : -3266.8,
+    "upperBoundary" : 3266.8
+  }, {
+    "topic" : "PRESSURE",
+    "unit" : "B",
+    "type" : "uint16",
+    "factor" : "1000",
+    "lowerBoundary" : 0.0,
+    "upperBoundary" : 65.336
+  }, {
+    "topic" : "CONSUMPTION_PER_MIN",
+    "unit" : "L",
+    "type" : "uint16",
+    "factor" : "0",
+    "lowerBoundary" : 0.0,
+    "upperBoundary" : 65336.0
+  }, {
+    "topic" : "CONSUMPTION_PER_10",
+    "unit" : "L",
+    "type" : "uint16",
+    "factor" : "0",
+    "lowerBoundary" : 0.0,
+    "upperBoundary" : 65336.0
+  }, {
+    "topic" : "CONSUMPTION_PER_HR",
+    "unit" : "L",
+    "type" : "uint16",
+    "factor" : "0",
+    "lowerBoundary" : 0.0,
+    "upperBoundary" : 65336.0
+  }, {
+    "topic" : "CONSUMPTION_PER_DAY",
+    "unit" : "L",
+    "type" : "uint16",
+    "factor" : "0",
+    "lowerBoundary" : 0.0,
+    "upperBoundary" : 65336.0
+  }, {
+    "topic" : "CONSUMPTION_PER_WEEK",
+    "unit" : "m3",
+    "type" : "uint16",
+    "factor" : "10",
+    "lowerBoundary" : 0.0,
+    "upperBoundary" : 6533.6
+  }, {
+    "topic" : "CONSUMPTION_PER_MONTH",
+    "unit" : "m3",
+    "type" : "uint16",
+    "factor" : "10",
+    "lowerBoundary" : 0.0,
+    "upperBoundary" : 6533.6
+  }, {
+    "topic" : "CONSUMPTION_PER_YEAR",
+    "unit" : "m3",
+    "type" : "uint16",
+    "factor" : "10",
+    "lowerBoundary" : 0.0,
+    "upperBoundary" : 6533.6
+  } ]
+}
