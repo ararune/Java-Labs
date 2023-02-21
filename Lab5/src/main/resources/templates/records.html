@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Devices</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid p-5">
+    <div class="text-center">
+        <h1>All Devices</h1>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Client</th>
+            <th>Client address</th>
+            <th>Id</th>
+            <th>Lower Boundary</th>
+            <th>Upper Boundary</th>
+            <th>Records</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="device : ${devices}">
+            <td th:text="${device.client.fullName}"></td>
+            <td th:text="${device.client.address.street}"></td>
+            <td th:text="${device.id}"></td>
+            <td th:text="${device.lowBoundary}"></td>
+            <td th:text="${device.upperBoundary}"></td>
+            <td>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Date of Measurement</th>
+                        <th>Measurement</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="record : ${device.records}">
+                        <td th:text="${record.id}"></td>
+                        <td th:text="${record.dateOfMeasurement}"></td>
+                        <td th:text="${record.measurement}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+

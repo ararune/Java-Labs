@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Addresses</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid p-5">
+  <div class="text-center">
+    <h1>All Addresses</h1>
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Street</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="address : ${addresses}">
+      <td th:text="${address.id}"></td>
+      <td th:text="${address.city}"></td>
+      <td th:text="${address.country}"></td>
+      <td th:text="${address.street}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
